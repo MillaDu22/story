@@ -1,0 +1,223 @@
+.container-services {
+    width: 100%;
+    background:black;
+    padding: 150px 20px 80px;
+    box-sizing: border-box;
+    text-align: center;
+    border-bottom: 1px solid black;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); 
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.container-services.fadeInUp {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.container-services .fa-cubes {
+    color:aqua;
+    font-size: 32px;
+    margin-top: 70px;
+}
+
+.services-title {
+    margin: 30px auto 60px auto;
+    max-width: 1800px;
+    font-family: 'Ysabeau SC', sans-serif;
+    color: aqua;
+    font-size: 28px;
+    background: black;
+    position: relative;
+    animation-name: text;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    }
+
+@keyframes text {
+    0% {
+        color: #202020;
+    }
+    30% {
+        letter-spacing: 16px;
+    }
+    85% {
+        letter-spacing: 6px;
+    }
+    100% {
+        letter-spacing: 6px;
+    }
+}
+
+.services-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1800px;
+    width:80%;
+    margin: 0 auto;
+}
+
+.service-card {
+    background: #333;
+    border-radius: 8px;
+    width: 400px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 3px 4px rgb(0, 0, 0, 1), inset 0 -2px 5px rgba(0, 0, 0, 1),
+    inset 0 4px 15px rgba(255, 255, 255, 0.245), 0 0 0 2px #33333330, 0 0 0 5px #33333330,
+    0 0 0 5.5px #33333330;
+    padding:15px;
+    margin-bottom: 10px;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
+.service-card h3 {
+    font-family: 'Ysabeau SC', sans-serif;
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    font-family: 'Ysabeau SC', sans-serif;
+    color: #bbb;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.service-card ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+.service-card ul li {
+    font-family: 'Ysabeau SC', sans-serif;
+    color: #ccc;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.price {
+    font-family: 'Ysabeau SC', sans-serif;
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.time, .payment, .evolution {
+    margin: 0 auto;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-ss-traitance, .title-payment, .title-evolution {
+    font-family: 'Ysabeau SC', sans-serif;
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.mention-ss-traitance, .mention-payment, .price-disclaimer {
+    color: #ccc;
+    font-family: 'Ysabeau SC', sans-serif;
+}
+
+.btn {
+    transition: background-color 0.3s ease;
+    padding: 10px 20px;
+    background-color: aqua;
+    color: black;
+    font-family: 'Ysabeau SC', sans-serif;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 3px 4px #343434, inset 0 -2px 5px #343434,
+    inset 0 4px 5px rgba(255, 255, 255, 0.245), 0 0 0 2px #343434, 0 0 0 5px #343434,
+    0 0 0 1.5px #343434;
+}
+
+.btn:hover {
+    background-color: white;
+}
+
+@media (max-width: 900px) {
+    .container-services {
+        padding: 50px 20px 110px;
+    }
+    .services-grid {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .service-card {
+        margin: 0 auto;
+        width: 96%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container-services {
+        padding: 50px 20px 60px;
+        opacity: 1;
+    }
+
+    .services-title {
+        font-size: 20px;
+    }
+    @keyframes text {
+        0% {
+            color: linear-gradient(135deg, #0d0d0d, #292929);
+        }
+        30% {
+            letter-spacing: 8px;
+        }
+        85% {
+            letter-spacing: 2px;
+        }
+        100% {
+            letter-spacing: 2px;
+        }
+    }
+    .services-grid {
+        width:96%;
+        padding:2%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .service-card {
+        margin: 0 ;
+        width: 90%;
+        margin-bottom: 20px;
+        padding: 5%;
+    }
+
+    .time, .payment, .evolution {
+        align-items: flex-start;
+        margin: 0 auto;
+        width: 90%;
+    }
+    .title-ss-traitance, .title-payment, .title-evolution {
+        text-align: left;
+    }
+    
+    .mention-ss-traitance, .mention-payment, .price-disclaimer {
+        color: #ccc;
+        font-family: 'Ysabeau SC', sans-serif;
+        text-align: left;
+    }
+}

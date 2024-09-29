@@ -1,0 +1,40 @@
+.legal-notice-section, .privacy-policy-section, .terms-of-service-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width:98%;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px auto;
+    border:1px solid black;
+    box-shadow: 0 3px 4px rgb(0, 0, 0, 1), inset 0 -2px 5px rgba(0, 0, 0, 1),
+    inset 0 4px 15px rgba(255, 255, 255, 0.245), 0 0 0 2px #000, 0 0 0 5px #000000,
+    0 0 0 5.5px #080808;
+}
+
+.legal-notice-section h2, .privacy-policy-section h2, .terms-of-service-section h2 {
+    font-size: 24px;
+    text-decoration: underline;
+    color: white;
+    margin-bottom: 15px;
+    font-family: 'Ysabeau SC', sans-serif;
+}
+
+.legal-notice-section p, .privacy-policy-section p, .terms-of-service-section p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: white;
+    margin-bottom: 10px;
+    font-family: 'Ysabeau SC', sans-serif;
+}
+
+.legal-notice-section a, .privacy-policy-section a, .terms-of-service-section a {
+    color: aqua;
+    text-decoration: none;
+    font-family: 'Ysabeau SC', sans-serif;
+}
+
+.legal-notice-section a:hover, .privacy-policy-section a:hover, .terms-of-service-section a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,71 @@
+.site-map-section, .legal-notice-section, .privacy-policy-section, .terms-of-service-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width:88%;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px auto;
+    margin-left: auto;
+    margin-right: auto;
+    border:1px solid black;
+    box-shadow: 0 3px 4px rgb(0, 0, 0, 1), inset 0 -2px 5px rgba(0, 0, 0, 1),
+    inset 0 4px 15px rgba(255, 255, 255, 0.245), 0 0 0 2px #000, 0 0 0 5px #000000,
+    0 0 0 5.5px #080808;
+}
+
+.site-map-section h2, .legal-notice-section h2, .privacy-policy-section h2, .terms-of-service-section h2 {
+    font-size: 24px;
+    color: white;
+    text-decoration: underline;
+    margin-bottom: 15px;
+    font-family: 'Ysabeau SC', sans-serif;
+}
+
+.site-map-section .p-plan{
+    font-size: 16px;
+    line-height: 1.6;
+    color: aqua;
+    margin-bottom: 10px;
+    font-family: 'Ysabeau SC', sans-serif;
+}
+
+.site-map-section .link-plan {
+    color: white; 
+    text-decoration: none;
+    margin: 0 10px;
+    font-family: 'Ysabeau SC', sans-serif;
+    cursor: pointer;
+}
+
+.site-map-section .p-plan{
+    color: white; 
+    margin: 0 10px;
+    font-family: 'Ysabeau SC', sans-serif;
+    transition: transform 0.3s ease, color 0.3s ease; 
+}
+
+.site-map-section .p-plan::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background-color: aqua; 
+    transition: width 0.3s ease, left 0.3s ease; 
+}
+
+.site-map-section .p-plan:hover{
+    color: aqua;
+    transform: translateY(-2px); 
+}
+
+.site-map-section .p-plan:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+
+

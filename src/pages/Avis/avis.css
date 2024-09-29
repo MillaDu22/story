@@ -1,0 +1,258 @@
+.slider-container {
+    background:black;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+    padding-top:175px;
+    padding-bottom:40px;
+    border-bottom:1px solid black;
+}
+
+.title-avis {
+    font-family: 'Ysabeau SC', sans-serif;
+    color:aqua;
+    font-size: 28px;
+    position: relative;
+    text-align: center;
+}
+
+.fa-edit {
+    width: 100%;
+    color: aqua;
+    font-size: 32px;
+    margin-top: 60px;
+    text-align: center;
+}
+
+.title-contact {
+    font-family: 'Ysabeau SC', sans-serif;
+    color:aqua;
+    font-size: 28px;
+    position: relative;
+    animation-name: text;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%; /* Prend toute la largeur */
+}
+
+.slide {
+    flex: 0 0 100%; /* Chaque slide prend 100% de la largeur */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    font-family: 'Ysabeau SC', sans-serif;
+}
+
+
+.avis {
+    margin-left: auto ;
+    margin-right: auto;
+    width:40%;
+}
+
+.stars {
+    font-size: 20px;
+    color: gold;
+}
+
+.add-review {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.add-button {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 24px;
+    background-color: #333;
+    color: aqua;
+    border: 2px solid aqua;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.add-button:hover {
+    color:white;
+    border: 2px solid white;
+}
+
+.review-form {
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.form-avis {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    margin-left: auto ;
+    margin-right: auto;
+}
+
+.review-form .form-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:50%;
+    margin-bottom: 15px;
+    font-family: 'Ysabeau SC', sans-serif;
+    color:white;
+}
+
+.review-form .form-group label {
+    padding-bottom: 5px;
+    font-weight: bold;
+    text-align: left;
+    width: 97%;
+    padding-left:1.5%;
+}
+
+.review-form .form-group input,
+.review-form .form-group select,
+.review-form .form-group textarea {
+    width: 96%;
+    padding: 2%;
+    border-radius: 4px;
+    font-family: 'Ysabeau SC', sans-serif;
+    box-shadow: 0 3px 4px rgb(0, 0, 0, 1), inset 0 -2px 5px rgba(100, 100, 100, 0.863),
+    inset 0 4px 15px rgba(255, 255, 255, 0.842), 0 0 0 2px #252525, 0 0 0 5px #262626,
+    0 0 0 1.5px #262626;
+    box-sizing: border-box;
+}
+
+.review-form h3 {
+    color:aqua;
+    font-family: 'Ysabeau SC', sans-serif;
+}
+
+.review-form input, .review-form select, .review-form textarea {
+    width: 50%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-family: 'Ysabeau SC', sans-serif;
+}
+
+.review-form select{
+    width: 51.5%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-family: 'Ysabeau SC', sans-serif;
+}
+
+.review-form button {
+    box-shadow: 0 3px 4px #0d0d0d, inset 0 -2px 5px #0d0d0d,
+    inset -4px 4px 15px rgba(255, 255, 255, 0.245), 0 0 0 2px #0d0d0d, 0 0 0 2px #0d0d0d,
+    0 0 0 -1.5px #0d0d0d;
+    border:2px solid black;
+    padding:10px;
+    border-radius: 15px;
+    background: #0d0d0d;
+    font-family: 'Ysabeau SC', sans-serif;
+    color: aqua; 
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+    position: relative;
+    overflow: hidden;
+    margin-top:0px;
+}
+
+.review-form button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #00FFFF; 
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+    z-index: 0;
+}
+
+.review-form button:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.review-form button:hover {
+    background-color: #00FFFF; 
+    transform: scale(1.05); 
+    color:black;
+    box-shadow: 2 2px 5px rgba(0, 255, 255, 0.87), inset -5 -5px 10px rgba(0, 255, 255, 0.791),
+    inset 0 4px 15px aqua, 0 0 0 2px aqua, 0 0 0 5px aqua,
+    0 0 0 5.5px rgba(0, 255, 255, 0.791);
+}
+
+.review-form button span {
+    position: relative;
+    z-index: 1; 
+}
+
+@media (max-width: 768px) {
+    .slider-container {
+        padding-bottom:40px;
+    }
+
+    .form-avis {
+        width:90%;
+        padding-bottom: 0px ;
+        margin-bottom: 0px;
+    }
+
+    .avis {
+        width:90%;
+    }
+
+    .review-form{
+        width:90%;
+        padding: 5%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 40px;
+    }
+
+    .review-form .form-group{
+        width:100%;
+        padding:0;
+    }
+
+
+    .review-form .form-group input,
+    .review-form .form-group select,
+    .review-form .form-group textarea {
+        width: 100%;
+        margin: 0%;
+        padding: 3%;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+}

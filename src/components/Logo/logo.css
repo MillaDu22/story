@@ -1,0 +1,264 @@
+@font-face {
+    font-family: 'Cinzel';
+    src: url('../../assets/fonts/Cinzel-Regular.otf') format('truetype')
+}
+
+@font-face {
+    font-family: 'Boheme';
+    src: url('../../assets/fonts/Boheme\ Floral.ttf') format('truetype')
+}
+
+/**{
+    border: 1px solid red;
+}*/
+
+.container-header {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items:center;
+    width:180px;
+    height:180px;
+    padding-left:0%;
+    margin-bottom:0;
+    background: black;
+
+}
+
+.container-containers {
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+}
+
+.container-title-france {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width:100%;
+}
+
+.title-app, .subtitle-app {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(90deg, #000, #fff, #000);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    animation: animate 2s linear infinite;
+    -webkit-background-clip: text;
+    background-clip:text;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.505);
+}
+
+@keyframes animate {
+    0% {
+        background-position: -500%;
+    }
+    100% {
+        background-position: 500%;
+    }
+}
+
+.title-app {
+    text-align: center;
+    font-family: 'Cinzel';
+    color:white;
+    font-size: 14px;
+    line-height: 40px;
+    font-weight: 200;
+    width:100%;
+}
+
+.bleu-blanc-rouge {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height:5px;
+    width:160px;
+    margin-top:-20px;
+    border:1px solid black;
+    border-radius: 3px;
+    animation: expandWidth 3s ease-in-out forwards, shimmer 2s ease-in-out infinite;
+}
+
+/* Animation for expanding the width */
+@keyframes expandWidth {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 160px;
+    }
+}
+
+/* Animation for shadow shimmer effect */
+@keyframes shimmer {
+    0%, 100% {
+        /*box-shadow: 0 0 5px #000000;*/
+        border:2px solid black;
+    }
+    50% {
+        border:2px solid rgb(111, 111, 111);
+    }
+}
+
+.bleu {
+    width:33.3%;
+    height:5px;
+    background: blue;
+}
+
+.blanc {
+    width:33.3%;
+    height:5px;
+    background: white;
+}
+
+.rouge {
+    width:33.3%;
+    height: 5px;
+    background:red;
+}
+
+.container-logo-subtitle {
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.britain {
+    width:40px;
+    height: 40px;
+}
+
+.subtitle-app {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-family: 'Boheme';
+    color:white;
+    font-size: 20px;
+    line-height: 40px;
+    font-weight: 100;
+    margin-top: 0px;
+    margin-left: 5px;
+
+}
+
+@media screen and (max-width:1007px) {
+    .container-header {
+        width:96%;
+        padding-left:0%;
+        padding-right: 3.5%;
+        margin-left: auto;
+        margin-right:auto ;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .container-containers {
+        margin-top: 120px;
+        width:50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .container-title-france {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width:78%;
+    }
+    
+    .title-app {
+        font-size: 32px;
+        width:265px;
+    }
+    
+    .bleu-blanc-rouge {
+        width:265px;
+        margin-top:-20px;
+    }
+    
+    .container-logo-subtitle {
+        width:265px;
+    }
+
+    .britain {
+        width:65px;
+        height: 65px;
+    }
+
+    .subtitle-app {
+        font-size: 35px;
+        width: 250px;
+        margin-top:5px;
+        margin-left:1px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .container-header {
+        width:96%;
+        padding-left:0%;
+        padding-right: 2.5%;
+        margin-left: auto;
+        margin-right:auto ;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .container-containers {
+        margin-top: 120px;
+        width:50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .container-title-france {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width:78%;
+    }
+    
+    .title-app {
+        font-size: 32px;
+        width:265px;
+    }
+    
+    .bleu-blanc-rouge {
+        width:265px;
+        margin-top:-20px;
+    }
+    
+    .container-logo-subtitle {
+        width:265px;
+    }
+
+    .britain {
+        width:65px;
+        height: 65px;
+    }
+
+    .subtitle-app {
+        font-size: 35px;
+        width: 250px;
+        margin-top:5px;
+        margin-left:1px;
+    }
+}

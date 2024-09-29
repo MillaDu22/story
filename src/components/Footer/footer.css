@@ -1,0 +1,259 @@
+.container-footer {
+    width: 100%;
+    height: auto; 
+    padding: 20px 5%; 
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    background: black;
+    box-sizing: border-box; 
+    border-top:1px solid rgba(75, 75, 75, 0.5); 
+}
+.box-links-footer {
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 40px;
+}
+
+.txt-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 20px; 
+}
+
+.adress, .copyright {
+    margin: 5px 0; 
+    line-height: 26px;
+    font-size: 16px; 
+    color: white;
+    font-family: 'Ysabeau SC', sans-serif;
+}
+
+.container-reseaux {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.title-reseaux, .title-mentions {
+    font-family: 'Ysabeau SC', sans-serif;
+    color: white;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.container-social {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px; 
+    text-align: center;
+}
+
+.facebook, .linkedin, .mail, .insta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;  
+    height: 50px;
+    margin: 10px; 
+    border-radius: 50%;
+    border: 2px solid transparent;
+    background-color: white; 
+    text-decoration: none;
+    font-size: 24px; 
+    color: white;
+    transition: all 0.3s ease-in-out; 
+    box-shadow: 0 3px 4px rgb(0, 0, 0, 1), inset 0 -2px 5px rgba(100, 100, 100, 0.863),
+    inset 0 4px 15px rgba(255, 255, 255, 0.842), 0 0 0 2px #252525, 0 0 0 5px #262626,
+    0 0 0 1.5px #262626;
+}
+
+/* Couleur des icônes */
+.facebook {
+    color: #1877F2; 
+}
+
+.linkedin {
+    color: #0077B5; 
+}
+
+.mail {
+    color: #D14836; 
+}
+
+.insta {
+    color: #C13584; 
+}
+
+/* Effet au survol */
+.facebook:hover, .linkedin:hover, .mail:hover, .insta:hover {
+    transform: scale(1.1); /* Légère augmentation de la taille */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Ombre plus intense */
+    border-color: currentColor; /* Border prend la couleur de l'icône */
+}
+
+
+.legal-notice {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    font-size: 14px;
+    color: white;
+    margin-top: 20px;
+}
+
+.legal-notice .buttons-mentions{
+    color: white; 
+    text-decoration: none;
+    margin: 0 10px;
+    font-family: 'Ysabeau SC', sans-serif;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease; 
+}
+
+
+.legal-notice .buttons-mentions::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background-color: aqua; 
+    transition: width 0.3s ease, left 0.3s ease; 
+}
+
+.legal-notice .buttons-mentions:hover {
+    color: aqua;
+    transform: translateY(-2px); 
+}
+
+.legal-notice .buttons-mentions:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.print-button {
+    box-shadow: 0 3px 4px #0d0d0d, inset 0 -2px 5px #0d0d0d,
+    inset -4px 4px 15px rgba(255, 255, 255, 0.245), 0 0 0 2px #0d0d0d, 0 0 0 2px #0d0d0d,
+    0 0 0 -1.5px #0d0d0d;
+    border:2px solid black;
+    padding:10px;
+    border-radius: 20px;
+    background: #0d0d0d;
+    font-family: 'Ysabeau SC', sans-serif;
+    color: white; 
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+    position: relative;
+    overflow: hidden;
+    margin-top:20px;
+}
+    
+.print-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #00FFFF; 
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+    z-index: 0;
+}
+
+.print-button:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.print-button:hover {
+    background-color: #00FFFF; 
+    transform: scale(1.05); 
+    color:black;
+    box-shadow: 2 2px 5px rgba(0, 255, 255, 0.87), inset -5 -5px 10px rgba(0, 255, 255, 0.791),
+    inset 0 4px 15px aqua, 0 0 0 2px aqua, 0 0 0 5px aqua,
+    0 0 0 5.5px rgba(0, 255, 255, 0.791);
+}
+
+.print-button span {
+    position: relative;
+    z-index: 1; 
+}
+
+
+
+@media screen and (max-width: 1050px) {
+    .container-footer {
+        flex-direction: column;
+        padding: 20px 10px;
+    }
+
+    .box-links-footer {
+        width:100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .txt-footer, .container-social {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .legal-notice {
+        font-size: 12px;
+        align-items: center;
+    }
+
+    .container-reseaux {
+        align-items: center;
+    }
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .container-footer {
+        flex-direction: column;
+        padding: 20px 10px;
+    }
+
+    .box-links-footer {
+        width:100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .txt-footer, .container-social {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .legal-notice {
+        font-size: 12px;
+        align-items: center;
+    }
+
+    .container-reseaux {
+        align-items: center;
+    }
+}
