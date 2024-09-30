@@ -2,6 +2,7 @@
   "name": "story",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://milladu22.github.io/story/",
   "dependencies": {
     "@svgr/plugin-svgo": "^8.1.0",
     "@svgr/webpack": "^8.1.0",
@@ -17,7 +18,9 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-google-recaptcha": "^3.1.0",
+    "react-helmet-async": "^2.0.5",
     "react-router-dom": "^6.26.2",
+    "react-to-print": "^3.0.0",
     "svgo": "^3.3.2",
     "web-vitals": "^2.1.4"
   },
@@ -25,9 +28,12 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "devDependencies": {
+    "gh-pages": "^6.1.1",
     "react-scripts": "^5.0.1"
   },
   "eslintConfig": {

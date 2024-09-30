@@ -7,12 +7,12 @@ function Modal({ show, onClose, title, message }) {
     }
 
     return (
-        <div className="modal-overlay">
-            <div className="modal">
-                <h2 className="modal-title">{title}</h2>
-                <p className="modal-message">{message}</p>
-                <button className="modal-close-button" onClick={onClose}>Fermer</button>
+        <div className="bottom-banner">
+            <div className="banner-content">
+                <h2 className="banner-title">{title}</h2>
+                <p className="banner-message">{message}</p>
             </div>
+            <button className="banner-close-button" onClick={onClose}>Fermer</button>
         </div>
     );
 }

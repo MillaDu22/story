@@ -1,0 +1,131 @@
+.container-promo {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    background:black;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); 
+    text-align: center;
+    box-sizing: border-box;
+    border-bottom: 1px solid black;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.container-promo.fadeInUp {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.container-promo .fa-percent {
+    font-size: 32px;
+    color: aqua;
+    margin-top: 60px;
+}
+
+.container-promo h2 {
+    font-family: 'Ysabeau SC', sans-serif;
+    color: aqua;
+    font-size: 28px;
+    margin-bottom: 20px;
+    /* Animation */
+    animation: fadeInScale 2.5s ease infinite;
+    opacity: 0; 
+}
+
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.5); 
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1); 
+    }
+}
+
+
+.container-promo p {
+    font-family: 'Ysabeau SC', sans-serif;
+    color: #bbb;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.promo-prices {
+    width:97%;
+    margin: 4% auto 4%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width:1800px;
+}
+
+.original-price {
+    text-decoration:line-through;
+}
+
+.promo-pack {
+    background: black;
+    margin-bottom: 40px;
+    border-radius: 8px;
+    width: 38%;
+    box-shadow: 0 3px 4px rgb(0, 0, 0, 1), inset 0 -2px 5px rgba(0, 0, 0, 1),
+    inset 0 4px 15px rgba(255, 255, 255, 0.245), 0 0 0 2px #000, 0 0 0 5px #000000,
+    0 0 0 5.5px #080808;
+    padding:15px;
+    transition: transform 0.3s ease;
+}
+
+.promo-pack:hover {
+    transform: translateY(-10px);
+}
+
+.promo-pack h3 {
+    font-family: 'Ysabeau SC', sans-serif;
+    color: #fff;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.promo-pack p {
+    font-family: 'Ysabeau SC', sans-serif;
+    color: #ccc;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.promo-pack .original-price {
+    color:red;
+} 
+
+.promo-pack .promotionnel-price {
+    color:chartreuse;
+} 
+
+
+.btn-promo:hover {
+    background-color: white;
+}
+
+@media (max-width: 768px) {
+    .container-promo {
+        width: 100%;
+    }
+
+    .promo-prices {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .promo-pack {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+    .container-promo p {
+        width:90%;
+        margin-left:auto;
+        margin-right:auto;
+    }
+}

@@ -9,6 +9,10 @@ import './footer.css';
 function Footer({ handlePrint }) {
     const [visibleComponent, setVisibleComponent] = useState(null);
 
+    handlePrint = () => {
+        window.print();
+    };
+    
     const handleLinkClick = (component) => {
         setVisibleComponent(visibleComponent === component ? null : component);
     };
@@ -27,7 +31,7 @@ function Footer({ handlePrint }) {
                     <button className="print-button" onClick={handlePrint}><span>Version Imprimable</span></button>
                 </div>
                 <div className="container-reseaux">
-                    <h2 className= "title-reseaux">Suivez-nous :</h2>
+                    <h2 className= "title-reseaux">Suivez AWC :</h2>
                     <div className="container-social">
                         <a className="facebook" href="https://www.facebook.com/armorwebcreations" target="blank" aria-label="facebook" rel="noopener noreferrer"><i className="fa-brands fa-facebook-f"></i></a>
                         <a className="linkedin" href="https://www.linkedin.com/in/ludmilla-marti-345313255/" target="blank" aria-label="linkedin" rel="noopener noreferrer"><i className="fa-brands fa-linkedin-in"></i></a>

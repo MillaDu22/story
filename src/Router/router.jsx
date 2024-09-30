@@ -1,4 +1,5 @@
 import React from 'react';
+import { CookiesProvider } from '../components/CookiesContext.jsx';
 import Home from "../pages/Home/index";
 import About from "../pages/About/index";
 import Services from "../pages/Services/index.jsx";
@@ -10,6 +11,7 @@ import { Routes, Route } from "react-router-dom";
 
 const Router =  () => {
     return (
+        <CookiesProvider>
             <Routes>
                 <Route exact path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
@@ -18,6 +20,7 @@ const Router =  () => {
                 <Route path="/contact" element={<Contact />} />
                 <Route path="*" element={<Error />} />
             </Routes>
+        </CookiesProvider>
     );
 };
 

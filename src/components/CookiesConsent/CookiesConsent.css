@@ -1,51 +1,49 @@
-/* Styles pour le fond de la modale */
-.modal-cookies {
+/* Bandeau cookies fixé en bas */
+.cookies-banner {
     position: fixed;
-    top:0%;
-    left:0%;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); 
+    bottom: 0; /* Fixe le bandeau en bas */
+    left: 0;
+    right: 0;
+    width: 100%; /* Largeur totale */
+    background: rgba(0, 0, 0, 0.85); /* Arrière-plan noir légèrement transparent */
+    color: white; /* Texte en blanc */
+    padding: 15px 30px; /* Espacement interne */
+    z-index: 1000; /* S'assure que le bandeau est au-dessus du contenu */
+    display: flex; /* Flex pour aligner le contenu */
+    justify-content: space-between; /* Sépare le texte des boutons */
+    align-items: center; /* Centre verticalement */
+    box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.5); /* Ajout d'une ombre pour effet */
+}
+
+/* Conteneur du contenu du bandeau */
+.cookies-banner-content {
     display: flex;
-    justify-content: center;
+    flex-direction: row;
     align-items: center;
-    z-index: 100000;
+    justify-content: space-between;
+    gap: 20px;
 }
 
-/* Styles pour le contenu de la modale */
-.modal-content-cookies {
-    background: #222;
-    color: #fff;
-    font-family: 'Ysabeau SC', sans-serif;
-    padding: 20px;
-    border-radius: 5px;
-    width: 80%;
-    max-width: 500px;
-    text-align: center;
-    box-shadow: 0 3px 4px #222222, inset 0 -2px 5px #222222,
-    inset 0 4px 15px rgba(255, 255, 255, 0.245), 0 0 0 2px #222222, 0 0 0 5px #00000098,
-    0 0 0 5.5px #22222217;
-    padding:15px;
-}
-
-.modal-buttons-cookies {
-    margin-top: 20px;
-}
-
-.modal-buttons-cookies button {
-    background: aqua;
-    font-family: 'Ysabeau SC', sans-serif;
+/* Boutons du bandeau cookies */
+.cookies-banner-buttons button {
+    background-color: aqua; /* Couleur verte */
     border: none;
-    padding: 10px 20px;
     color: black;
+    padding: 10px 20px;
+    margin: 0 10px;
     border-radius: 5px;
     cursor: pointer;
-    margin: 0 10px;
-    box-shadow: 0 3px 4px #343434, inset 0 -2px 5px #343434,
-    inset 0 4px 5px rgba(255, 255, 255, 0.245), 0 0 0 2px #343434, 0 0 0 5px #343434,
-    0 0 0 1.5px #343434;
+    font-family: 'Ysabeau SC', sans-serif;
 }
 
-.modal-buttons-cookies button:hover {
-    background-color: white;
+.cookies-banner-buttons button:hover {
+    background-color: rgb(1, 221, 221); /* Changement de couleur au survol */
+}
+
+.cookies-banner-buttons button:nth-child(2) {
+    background-color: #f44336; /* Couleur rouge pour le refus */
+}
+
+.cookies-banner-buttons button:nth-child(2):hover {
+    background-color: #da190b; /* Changement de couleur au survol */
 }
