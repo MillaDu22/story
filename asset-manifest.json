@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/story/static/css/main.074330d3.css",
+    "main.js": "/story/static/js/main.84ee259a.js",
+    "static/js/453.67e000b3.chunk.js": "/story/static/js/453.67e000b3.chunk.js",
+    "static/media/Boheme Floral.ttf": "/story/static/media/Boheme Floral.0345ab604f426031d363.ttf",
+    "static/media/Cinzel-Regular.otf": "/story/static/media/Cinzel-Regular.f91baf6fe825a2549798.otf",
+    "static/media/screens.webp": "/story/static/media/screens.95a03a9cd4c70df9a906.webp",
+    "static/media/britain-logo.webp": "/story/static/media/britain-logo.fcb245e4236a9c1de19e.webp",
+    "index.html": "/story/index.html",
+    "main.074330d3.css.map": "/story/static/css/main.074330d3.css.map",
+    "main.84ee259a.js.map": "/story/static/js/main.84ee259a.js.map",
+    "453.67e000b3.chunk.js.map": "/story/static/js/453.67e000b3.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.074330d3.css",
+    "static/js/main.84ee259a.js"
+  ]
+}
